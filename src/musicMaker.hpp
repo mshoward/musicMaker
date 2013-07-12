@@ -28,4 +28,4 @@ class Song
 		
 		void genSong();
 		void writeSong();
-}
+};
