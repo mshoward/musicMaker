@@ -13,6 +13,11 @@ struct Theme
 	Note * notes;
 	int length;
 	int position;
+	char key;
+	Note& operator[] (int x)
+	{
+		return notes[x];
+	}
 };
 
 class Song
@@ -20,7 +25,7 @@ class Song
 	public:
 		Theme * themes;
 		int length;
-		int * positions;
+		Theme ** positions;
 		unsigned seed;
 		
 		Song();
@@ -28,4 +33,6 @@ class Song
 		
 		void genSong();
 		void writeSong();
-};
+		//accessors and setters
+		Theme& operator[] (int x);
+}
