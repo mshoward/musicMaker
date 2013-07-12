@@ -31,8 +31,13 @@ class Song
 		Song();
 		~Song();
 		
+		//generates the song
 		void genSong();
-		void writeSong();
+		
+		void writeSongFlac();
+		void writeSongMidi();
 		//accessors and setters
+		
+		//returns the theme beginning at position x, or 0
 		Theme& operator[] (int x);
 }
